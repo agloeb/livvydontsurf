@@ -1,98 +1,46 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="livvy don't surf">
 <title>livvy don't surf</title>    
 <link rel="icon" href="img/favicon.png"/>
 <style>
+html{
+background-color: black;
+overflow: hidden;
+}
 body{
-white-space: pre;
-font-family: monospace;
-overflow: none!important;
-text-align: center;
+position: relative;
+width: 100%;
+height: 100vh;
+display: flex;
 justify-content: center;
+align-items: center;
 }
-a{
-text-decoration: none;
-color: black;
-}
-a:hover{
-color: rgb(255, 76, 76);
-text-decoration-line:underline;
-cursor: default;
-}
-.title{
-margin-left: 50px;
-text-align: left;
-}
-.title:hover{
-animation: title 1.5s forwards;
-}
-.title:hover::after{
-animation: title 1.5s backwards;
-}
-@keyframes title{
-0%{
-color: black;
-}
-100%{
-color: rgb(12, 163, 105);
-}
+#projection{
+display: block;
+width: 50vw;
+height: auto;
+transition: opacity 0.5s ease-in-out;
+opacity: 1;
 }
 </style>
 </head>
 <body>
-<p>                                                                                         
-<a>                                               Z                                         
-<a>                                            YX  X                                        
-<a>                                          M    Z K                                      
-<a>                                           KJ FDDADMS                                    
-<a>                                           QURYJTYTZTN                                   
-<a>                                          NNQWYX     Z                                   
-<a>                                                        J                                
-<a>                                      D           T Z UYMPN                              
-<a>                                    GTAJPQFS     I  MPSS VRPX                            <a></a>
-<a>                                  MERYYJRYZMS      OYLQPRRPXUPLX                         
-<a>                                 UJAPFFLFLPIIAIH ZAPRONIXHPINFWGNU                       
-<a>                               DFACTPUDAAC XN   F                 SSN                    
-<a>                              XT              RU NAAS        X   KSNJK                   
-<a>                            RMNKHP          RDGUIGGAAPZ    NE  ZDHNSYVTZ                 
-<a>                          HOKOOMOOOT   PX MHDAUPHIARACAAX Y P SMWPPTSOWWQR               
-<a>                         ILHHNLHHDEJNO XYWQROQCOQYSARAAA C AJHHN                         
-<a>                       HJLN           INAFCBO QTTL FSABDAAAF                 N           
-<a>                     KTZ            AACNSHGGAGP SCFRYHDWXAABAAS         WRDARUGT         
-<a>                   LIKHIVI        NFAFHDQSIHVAAAFLKBSWXQEDCAAACAL     YVBIBNWAOGPA       
-<a>              Z   LFACCHIPGP     OFDGDFMMEVUDA JAMCUUPIDHRUAIVAA P  OWHOAFUABDCHQHFF     
-<a>         Y Z XZOMNVICCNFPCBTSEMTKPMD BAFBBLQSNUVOKJUU KKMFGOCA  ADNMMYXLJSPOEJDSHFUCRS   
-<a>         XXXXXX   CDMDIJPADAAK           FQ                      AATAAPAZ PTEMSNAVATOAR  
-<a>        XYX      JHDQMKHABCKDJIU      ZZ  W  Y              Z  M QAOGHXJJ  TGTOVAACMG    
-<a>                 EOAAFLLFANBCCARA   Y X                S     F DTNHALNSAAKRNU OTGDC      
-<a>                  EDBAIAIDBCDRALA   Z      P     Y    XZ    QAINDLUVADZSACQJBBMVA        
-<a>                    BIBAJBBADAQUA ARE Y  X                DAHSAAGACKLRNALTHAIAAG         
-<a>                     AFHHDAEGANLKHAPO    XY             TGPCABSACAAAEMFBCAAAAC           
-<a>                       HCIEGADAAOJAAWAQA          W  Y   Z AJPRABRDCABBCMAAA             
-<a>                         CDXBAAONAAVGAWMD                 FEACAABTJWAGAAGEA              
-<a>                          ABAAHLAAOIABIA                     FLADYBCIAALD                
-<a>                            DNMAAAHMJA                   T    FAGVAPUGA                  
-<a>                              CBTBIR                      X    LKSA AJ                   
-<a>                               AJNA            MMAY  FVAQXIZI EHAABA                     
-<a>                                 Z     GGBJHAAE ALCAAGAADBAAAAGAMF                       
-<a>                                   ACABAIAAAAAAABAAFPBTAJMFBLDAHD                        
-<a>                                      AADAAEHANTRAJNSAYEOAKFSBAG                          
-<a>                                       BBAAAAAAPDCAON IMKARQHA                           
-<a>                                         ABEAAAAECDLRXHAFCAA                             
-<a>                                          AAAAAADBAJCEACAA                               
-<a>                                            AAAAAAKFCADEC                                
-<a>                                              AABGFAAABB                                  
-<a>                                               ACAKAAA                                   
-<a>                                                 HIO                                     
-<a>                                               HHP                                       
-<a>                                             HHHHHOW                                     
-<a>                                            JHHHHHKR                                     
-<a>                                                HI LX                                    
-<a>                                                                                    IIMS                                                                        
-</p>
+<img onmouseover="stack('car')" onmouseleave="unstack()" id="projection" src="img/4.png">
 </body>
 <script>
-var subtitle
+function stack(x){
+switch (x) {
+case 'car':
+    {
+        document.getElementById("projection").src="img/5.png"
+    };
+    break;
+}}
+function unstack(){
+document.getElementById("projection").src="img/4.png";
+}
 </script>
 </html>
